@@ -2,53 +2,76 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-}
 
-#myVideo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
 
-video {
-  object-fit: cover;
-}
+  #myVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-.logo {
-  width: 750px;
-  width: 80vh;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 25%;
-}
+  video {
+    object-fit: cover;
+  }
 
-.enter-button {
-  position: absolute;
-  bottom: 10%;
-  width: 25vh;
-  height: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  border: 5px solid #624a0f;
-  background-color: transparent;
-  font-size: 4vh;
-  // color: #aa8855;
-  color: #624a0f;
-  cursor: pointer;
-  transition: all .3s ease;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
+  .logo {
+    width: 750px;
+    width: 80vh;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    animation: fadeInAnimation ease-in 3s;
+    animation-fill-mode: forwards;
+  }
 
-.enter-button:hover {
-  background-color: rgba(98, 74, 15, .4);
-  // color: #aa8855;
-  border: 5px solid #624a0f;
+  .enter-button {
+    opacity: 0;
+    position: absolute;
+    bottom: 10%;
+    width: 25vh;
+    height: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    border: 5px solid #624a0f;
+    background-color: transparent;
+    font-size: 4vh;
+    // color: #aa8855;
+    color: #624a0f;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    animation: fadeInAnimation ease-in 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+  }
+
+  .enter-button:hover {
+    background-color: rgba(98, 74, 15, .4);
+    // color: #aa8855;
+    border: 5px solid #624a0f;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(.95);
+    }
+
+    90% {
+      transform: scale(1);
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 }
